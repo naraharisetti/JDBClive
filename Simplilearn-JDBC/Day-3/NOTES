@@ -18,6 +18,42 @@ Step 5: We need to creare the HBM file and placed in to package
    
    
    
+Execution :
+
+XML
+	1. Load the hibernate.cfg
+	2. Load the *.hbm.xml file 
+	3. Load the Entity/POJO/TO Class
+	4. Execute and provide the output
+
+
+Annotation (@Entity)
+	1. Load the hibernate.cfg
+	2. Load the Entity Class
+	3. Execute and provide the output
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
    
    
