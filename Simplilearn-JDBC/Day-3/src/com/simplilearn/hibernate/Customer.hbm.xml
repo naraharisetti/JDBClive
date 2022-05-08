@@ -15,5 +15,3 @@
 		<property name="bal" column="Bal" type="double" />
 	</class>
 </hibernate-mapping>
-
-

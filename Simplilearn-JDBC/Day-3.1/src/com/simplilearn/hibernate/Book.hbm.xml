@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping package="com.simplilearn.hibernate">
 	
-	<class name="Book" table="BOOK">
+	<class name="Book" table="BOOK2">
 
 		<id name="bookid" column="BOOK_ID" type="int">	
 		<generator class="increment" />	

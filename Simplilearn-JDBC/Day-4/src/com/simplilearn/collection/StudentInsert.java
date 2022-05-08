@@ -15,17 +15,16 @@ import org.hibernate.cfg.Configuration;
 public class StudentInsert {
 
 	public static void main(String[] args) {
+		
 		Transaction tx = null;
 		SessionFactory factory;
 
 		try {
-
 			Configuration cfg = new Configuration();
 			cfg = cfg.configure();
 			factory = cfg.buildSessionFactory();
 			Session session = factory.openSession();
-			tx = session.beginTransaction();
-			
+			tx = session.beginTransaction();			
 			
 			String courses[] = { "java", "Jdbc", "Jsp" };
 
@@ -35,24 +34,33 @@ public class StudentInsert {
 			emails.add("Shivadimon420@abc");
 			
 			List<Integer> marks = new ArrayList<Integer>();
+//			marks.add(100);
+//			marks.add(22);
+//			marks.add(90);
+			
 			marks.add(new Integer(100));
 			marks.add(new Integer(22));
 			marks.add(new Integer(90));
 
 			Set<Long> phone = new HashSet<Long>();
+//			phone.add((long)911111);
+//			phone.add((long)912222);
+//			phone.add((long)913333);
 			phone.add(new Long(911111));
 			phone.add(new Long(912222));
 			phone.add(new Long(913333));
 
 			Map<String, Long> studentReferance = new HashMap<String, Long>();
 
+//			studentReferance.put("rasumani96", (long)911111);
+//			studentReferance.put("devisri081995", (long)912222);
+//			studentReferance.put("Shivadimon420", (long)913333);			
 			studentReferance.put("rasumani96", new Long(911111));
 			studentReferance.put("devisri081995", new Long(912222));
 			studentReferance.put("Shivadimon420", new Long(913333));
 
 			Student stu = new Student("Mohan", "04-09-13", "MCA", courses, emails,marks, phone, studentReferance);
-			session.save(stu);
-			
+			session.save(stu);			
 			
 			tx.commit();
 			session.close();
@@ -61,8 +69,6 @@ public class StudentInsert {
 			e.printStackTrace();
 			if (tx != null)
 				tx.rollback();
-
 		}
 	}
-
 }
